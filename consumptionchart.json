@@ -25,6 +25,9 @@
           "url": "https://raw.githubusercontent.com/adamkhandesnz/adamkhandesnz.GitHub.io/main/meanconbyitl1.csv"
         }
       }
+    },
+    {
+      "filter": "datum.name != 'Northern Ireland'"
     }
   ],
   "projection": {"type": "mercator"},
