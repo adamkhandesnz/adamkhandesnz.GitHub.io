@@ -38,7 +38,7 @@
       },
       "tooltip": [
         {"field": "properties.ITL121NM", "title": "Region"},
-        {"field": "value", "title": "Population", "format": ","}
+        {"field": "value", "title": "Mean consumption (kWh)", "format": ","}
       ]
     },
     "config": {}
