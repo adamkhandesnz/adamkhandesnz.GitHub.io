@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A map of mean domestic power consumption by ITL1 (formerly NUT1) region in GB, 2022. DESNZ data.",
+    "title": {
+      "text": "Mean domestic power consumption per household (kWh)",
+      "subtitle": ["International Territorial Level 1", "Source: DESNZ"],
+      "fontSize": 16,
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": "lighter",
+      "anchor": "middle"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/datasets/advanced/uk_itl1.geojson",
+      "format": {"property": "features"}
+    },
+    "width": 300,
+    "height": 400,
+    "transform": [
+      {
+        "lookup": "properties.ITL121CD",
+        "from": {
+          "key": "ITL code",
+          "fields": ["name", "value"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/adamkhandesnz/adamkhandesnz.GitHub.io/main/meanconbyitl1.csv"
+          }
+        }
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+        "field": "value",
+        "type": "quantitative",
+        "scale": {"scheme": "goldorange"},
+        "legend": {"title": ""}
+      },
+      "tooltip": [
+        {"field": "properties.ITL121NM", "title": "Region"},
+        {"field": "value", "title": "Population", "format": ","}
+      ]
+    },
+    "config": {}
+  }
