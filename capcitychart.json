@@ -32,10 +32,12 @@
   },
   "encoding": {
     "x": {
+      "title":null,
       "field": "Year",
       "type": "temporal"
     },
     "y": {
+      "title":null,
       "field": "net_capacity",
       "type": "quantitative"
     }
