@@ -1,0 +1,10 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Thermal constraint cost",
+  "data": {"url": "https://raw.githubusercontent.com/adamkhandesnz/adamkhandesnz.GitHub.io/main/constraint-breakdown-2023-2024.csv"},
+  "mark": "square",
+  "encoding": {
+    "x": {"field": "Thermal constraints volume", "type": "quantitative"},
+    "y": {"field": "Thermal constraints cost", "type": "quantitative"}
+  }
+}
