@@ -1,8 +1,8 @@
-{
+O{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Egypt electricity production",
-    "subtitle": ["GWh", "Source: IEA via API"]
+    "text": "Egypt electricity output",
+    "subtitle": ["GWh", "Source: IEA via ECO:API"]
   },
   "width": 400,
   "height": 300,
